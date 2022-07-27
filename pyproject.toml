@@ -7,6 +7,7 @@ authors = ["Ehsan <barkhordar.me@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.10"
 Django = "^4.0.6"
+django-environ = "^0.9.0"
 
 [tool.poetry.dev-dependencies]
 
