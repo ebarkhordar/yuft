@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.http import HttpResponse
+from django.template import loader
+from django.urls import path, include
+
+
+def home(request):
+    template = loader.get_template('home.html')
+    return HttpResponse(template.render())
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home, name='index'),
+    path('labels/', include('yuft.labels.urls')),
 ]

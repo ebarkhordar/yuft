@@ -47,7 +47,7 @@ DJANGO_APPS = [
 THIRD_PARTY_APPS = [
 ]
 PROJECT_APPS = [
-    "yuft.labeling",
+    "yuft.labels",
 ]
 INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 

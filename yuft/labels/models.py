@@ -23,24 +23,21 @@ class DateAwareModel(models.Model):
 class Label(DateAwareModel):
     name = models.CharField(
         verbose_name=_("name"),
-        help_text=_("the `name` of the property."),
         max_length=128,
     )
     brand = models.CharField(
         verbose_name=_("brand"),
-        help_text=_("the `brand` of the property."),
         max_length=128,
     )
     owner = models.CharField(
         verbose_name=_("owner"),
-        help_text=_("the `owner` of the property."),
         max_length=128,
     )
     serial_number = models.BigIntegerField(
         verbose_name=_("serial number"),
-        help_text=_("the `serial number` of the property."),
     )
     signature = models.TextField(
         verbose_name=_("signature"),
-        help_text=_("the `signature` of the information."),
+        null=True,
+        blank=True,
     )

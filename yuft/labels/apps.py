@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class LabelingConfig(AppConfig):
+class LabelsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'yuft.labeling'
+    name = 'yuft.labels'
