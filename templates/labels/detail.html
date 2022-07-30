@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Label detail</h1>
+    {% if label %}
+        <p>Name: <b>{{ label.name }}</b></p>
+        <p>Brand: <b>{{ label.brand }}</b></p>
+        <p>Owner: <b>{{ label.owner }}</b></p>
+        <p>Serial number: <b>{{ label.serial_number }}</b></p>
+        <p>Signature: <b>{{ label.signature }}</b></p>
+        <p>last update: <b>{{ label.updated_at }}</b></p>
+    {% else %}
+        <p>There is no label with this id.</p>
+    {% endif %}
+{% endblock %}

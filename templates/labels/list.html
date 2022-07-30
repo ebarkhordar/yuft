@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <h1>Labels</h1>
+    <ul>
+        {% for label in label_list %}
+            <li>{{ label.pub_date|date }} - {{ article.headline }}</li>
+        {% empty %}
+            <li>No labels yet.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
