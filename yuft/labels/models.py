@@ -35,9 +35,9 @@ class Label(DateAwareModel):
     )
     serial_number = models.BigIntegerField(
         verbose_name=_("serial number"),
+        db_index=True,
+        unique=True,
     )
     signature = models.TextField(
         verbose_name=_("signature"),
-        null=True,
-        blank=True,
     )

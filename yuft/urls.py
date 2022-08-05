@@ -26,6 +26,6 @@ def home(request):
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='index'),
-    path('labels/', include('yuft.labels.urls')),
+    path('api-auth/', include('rest_framework.urls')),
+    path('label/', include('yuft.labels.urls')),
 ]
